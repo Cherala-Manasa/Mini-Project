@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beginner CSS Language Quiz</title>
+    <link rel="stylesheet" href="quesstyles.css">
+</head>
+<body>
+    <header>
+        <h1>ProgQuiz - CSS Language Beginner Level</h1>
+    </header>
+    <div class="container">
+        <h1>Beginner CSS Language Quiz</h1>
+        <p>Test your basic knowledge of CSS.</p>
+        <form id="quizForm">
+            <div class="quiz-question" data-question="1">
+                <h3>1. What does CSS stand for?</h3>
+                <input type="radio" name="q1" value="A"> A. Creative Style Sheets<br>
+                <input type="radio" name="q1" value="B"> B. Colorful Style Sheets<br>
+                <input type="radio" name="q1" value="C"> C. Computer Style Sheets<br>
+                <input type="radio" name="q1" value="D" class="correct"> D. Cascading Style Sheets<br>
+                <div class="description incorrect" id="desc-q1-wrong">Incorrect. The correct answer is D. CSS stands for Cascading Style Sheets.</div>
+                <div class="description correct" id="desc-q1-correct">Correct! CSS stands for Cascading Style Sheets.</div>
+                <div class="navigation-buttons">
+                    <button type="button" class="show-description" onclick="showDescription(1)">Show Description</button>
+                    <button type="button" class="next-question" onclick="nextQuestion()">Next</button>
+                </div>
+            </div>
+            
+            <div class="quiz-question" data-question="2">
+                <h3>2. How do you select an element with the class name "example" in CSS?</h3>
+                <input type="radio" name="q2" value="A"> A. #example<br>
+                <input type="radio" name="q2" value="B" class="correct"> B. .example<br>
+                <input type="radio" name="q2" value="C"> C. *example<br>
+                <input type="radio" name="q2" value="D"> D. example<br>
+                <div class="description incorrect" id="desc-q2-wrong">Incorrect. The correct answer is B. To select an element with the class name "example," use .example.</div>
+                <div class="description correct" id="desc-q2-correct">Correct! Use .example to select elements with the class name "example."</div>
+                <div class="navigation-buttons">
+                    <button type="button" class="show-description" onclick="showDescription(2)">Show Description</button>
+                    <button type="button" class="next-question" onclick="nextQuestion()">Next</button>
+                </div>
+            </div>
+            
+            <div class="quiz-question" data-question="3">
+                <h3>3. Which property is used to change the text color of an element?</h3>
+                <input type="radio" name="q3" value="A"> A. font-color<br>
+                <input type="radio" name="q3" value="B" class="correct"> B. color<br>
+                <input type="radio" name="q3" value="C"> C. text-color<br>
+                <input type="radio" name="q3" value="D"> D. background-color<br>
+                <div class="description incorrect" id="desc-q3-wrong">Incorrect. The correct answer is B. The 'color' property is used to change the text color of an element.</div>
+                <div class="description correct" id="desc-q3-correct">Correct! Use the 'color' property to change the text color of an element.</div>
+                <div class="navigation-buttons">
+                    <button type="button" class="show-description" onclick="showDescription(3)">Show Description</button>
+                    <button type="button" class="next-question" onclick="nextQuestion()">Next</button>
+                </div>
+            </div>
+            
+            <div class="quiz-question" data-question="4">
+                <h3>4. How do you add a background color to an element in CSS?</h3>
+                <input type="radio" name="q4" value="A"> A. background<br>
+                <input type="radio" name="q4" value="B"> B. color<br>
+                <input type="radio" name="q4" value="C"> C. bg-color<br>
+                <input type="radio" name="q4" value="D" class="correct"> D. background-color<br>
+                <div class="description incorrect" id="desc-q4-wrong">Incorrect. The correct answer is D. Use the 'background-color' property to add a background color to an element.</div>
+                <div class="description correct" id="desc-q4-correct">Correct! The 'background-color' property adds a background color to an element.</div>
+                <div class="navigation-buttons">
+                    <button type="button" class="show-description" onclick="showDescription(4)">Show Description</button>
+                    <button type="button" class="next-question" onclick="nextQuestion()">Next</button>
+                </div>
+            </div>
+            
+            <div class="quiz-question" data-question="5">
+                <h3>5. What is the correct CSS syntax to make all &lt;p&gt; elements bold?</h3>
+                <input type="radio" name="q5" value="A"> A. p { font-bold: true; }<br>
+                <input type="radio" name="q5" value="B"> B. p { text-weight: bold; }<br>
+                <input type="radio" name="q5" value="C"> C. p { bold: yes; }<br>
+                <input type="radio" name="q5" value="D" class="correct"> D. p { font-weight: bold; }<br>
+                <div class="description incorrect" id="desc-q5-wrong">Incorrect. The correct answer is D. Use 'font-weight: bold;' to make all &lt;p&gt; elements bold.</div>
+                <div class="description correct" id="desc-q5-correct">Correct! The 'font-weight: bold;' property makes all &lt;p&gt; elements bold.</div>
+                <div class="navigation-buttons">
+                    <button type="button" class="show-description" onclick="showDescription(5)">Show Description</button>
+                    <button type="button" class="next-question" onclick="nextQuestion()">Next</button>
+                </div>
+            </div>
+            
+            <div class="quiz-question" data-question="6">
+                <h3>6. What is the output of the following CSS code?</h3>
+                <code>p {<br>
+                &nbsp;&nbsp;color: red;<br>
+                &nbsp;&nbsp;font-size: 20px;<br>
+                }</code><br>
+                <input type="radio" name="q6" value="A"> A. Text color is blue and font size is 20px<br>
+                <input type="radio" name="q6" value="B"> B. Text color is red and font size is 16px<br>
+                <input type="radio" name="q6" value="C"> C. Compilation error<br>
+                <input type="radio" name="q6" value="D" class="correct"> D. Text color is red and font size is 20px<br>
+                <div class="description incorrect" id="desc-q6-wrong">Incorrect. The correct answer is D. The 'color' is red and 'font-size' is 20px.</div>
+                <div class="description correct" id="desc-q6-correct">Correct! The 'color' property sets the text color to red, and 'font-size' sets the font size to 20px.</div>
+                <div class="navigation-buttons">
+                    <button type="button" class="show-description" onclick="showDescription(6)">Show Description</button>
+                    <button type="button" class="next-question" onclick="nextQuestion()">Next</button>
+                </div>
+            </div>
+            
+            <div class="quiz-question" data-question="7">
+                <h3>7. What is the result of the following CSS code?</h3>
+                <pre><code>h1 {<br>
+                &nbsp;&nbsp;text-align: center;<br>
+                &nbsp;&nbsp;margin: 10px;<br>
+                }</code></pre>
+                <input type="radio" name="q7" value="A"> A. The text in &lt;h1&gt; is left-aligned with no margin<br>
+                <input type="radio" name="q7" value="B"> B. The text in &lt;h1&gt; is right-aligned with a margin of 10px<br>
+                <input type="radio" name="q7" value="C"> C. The text in &lt;h1&gt; is centered with a margin of 0px<br>
+                <input type="radio" name="q7" value="D" class="correct"> D. The text in &lt;h1&gt; is centered with a margin of 10px<br>
+                <div class="description incorrect" id="desc-q7-wrong">Incorrect. The correct answer is D. The text in &lt;h1&gt; is centered with a margin of 10px.</div>
+                <div class="description correct" id="desc-q7-correct">Correct! The 'text-align' property centers the text, and the 'margin' property sets a 10px margin.</div>
+                <div class="navigation-buttons">
+                    <button type="button" class="show-description" onclick="showDescription(7)">Show Description</button>
+                    <button type="button" class="next-question" onclick="nextQuestion()">Next</button>
+                </div>
+            </div>
+            
+            <div class="quiz-question" data-question="8">
+                <h3>8. How do you select all &lt;div&gt; elements within a &lt;section&gt; element?</h3>
+                <pre><code>section div {<br>
+                &nbsp;&nbsp;/* CSS properties */<br>
+                }</code></pre>
+                <input type="radio" name="q8" value="A"> A. div section<br>
+                <input type="radio" name="q8" value="B"> B. section + div<br>
+                <input type="radio" name="q8" value="C" class="correct"> C. section div<br>
+                <input type="radio" name="q8" value="D"> D. section > div<br>
+                <div class="description incorrect" id="desc-q8-wrong">Incorrect. The correct answer is C. 'section div' selects all &lt;div&gt; elements inside a &lt;section&gt; element.</div>
+                <div class="description correct" id="desc-q8-correct">Correct! 'section div' selects all &lt;div&gt; elements within a &lt;section&gt; element.</div>
+                <div class="navigation-buttons">
+                    <button type="button" class="show-description" onclick="showDescription(8)">Show Description</button>
+                    <button type="button" class="next-question" onclick="nextQuestion()">Next</button>
+                </div>
+            </div>
+            
+            <div class="quiz-question" data-question="9">
+                <h3>9. What does the 'float' property do in CSS?</h3>
+                <input type="radio" name="q9" value="A"> A. It centers an element horizontally<br>
+                <input type="radio" name="q9" value="B"> B. It changes the element's font size<br>
+                <input type="radio" name="q9" value="C" class="correct"> C. It allows an element to float to the left or right of its container<br>
+                <input type="radio" name="q9" value="D"> D. It makes an element fixed at a specific position<br>
+                <div class="description incorrect" id="desc-q9-wrong">Incorrect. The correct answer is C. The 'float' property allows an element to float to the left or right of its container.</div>
+                <div class="description correct" id="desc-q9-correct">Correct! The 'float' property makes an element float to the left or right of its container.</div>
+                <div class="navigation-buttons">
+                    <button type="button" class="show-description" onclick="showDescription(9)">Show Description</button>
+                    <button type="button" class="next-question" onclick="nextQuestion()">Next</button>
+                </div>
+            </div>
+            
+            <div class="quiz-question" data-question="10">
+                <h3>10. Which CSS property is used to control the spacing between lines of text?</h3>
+                <input type="radio" name="q10" value="A"> A. text-spacing<br>
+                <input type="radio" name="q10" value="B"> B. font-spacing<br>
+                <input type="radio" name="q10" value="C" class="correct"> C. line-height<br>
+                <input type="radio" name="q10" value="D"> D. margin<br>
+                <div class="description incorrect" id="desc-q10-wrong">Incorrect. The correct answer is C. 'line-height' controls the spacing between lines of text.</div>
+                <div class="description correct" id="desc-q10-correct">Correct! The 'line-height' property controls the spacing between lines of text.</div>
+                <div class="navigation-buttons">
+                    <button type="button" class="show-description" onclick="showDescription(10)">Show Description</button>
+                    <button type="button" class="next-question" id="finishQuizButton" onclick="submitQuiz()">Finish Quiz</button>
+                </div>
+            </div>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script>
+        let currentQuestion = 1;
+        const totalQuestions = 10;
+        const correctAnswers = ['D', 'B', 'B', 'D', 'D', 'D', 'D', 'C', 'C', 'C'];
+
+        function showQuestion(questionNumber) {
+            document.querySelectorAll('.quiz-question').forEach((el) => {
+                el.style.display = 'none';
+            });
+            document.querySelector(`.quiz-question[data-question="${questionNumber}"]`).style.display = 'block';
+        }
+
+        function submitQuiz() {
+            let score = 0;
+
+            // Loop through all questions and check answers
+            for (let i = 1; i <= totalQuestions; i++) {
+            const selectedAnswer = document.querySelector(`input[name="q${i}"]:checked`);
+            if (selectedAnswer) {
+                if (selectedAnswer.classList.contains('correct')) {
+                    score++;
+                }
+            }
+            // Display the result
+            const resultContainer = document.getElementById('result');
+            resultContainer.innerHTML = `<h2>Your Score: ${score} out of ${totalQuestions}</h2>`;
+
+            if (score === totalQuestions) {
+                quote = "🎉 Excellent work! You nailed every question! 🎉";
+            } else if (score >= totalQuestions * 0.7) {
+                quote = "👍 Great job! You're quite knowledgeable in CSS! 👍";
+            } else {
+                quote = "💪 Good effort! Keep practicing to improve your skills! 💪";
+            }
+
+            document.getElementById('result').innerHTML = `
+                <h2>Your score is ${score} out of ${totalQuestions}.</h2>
+                <div class="quote">${quote}</div>
+                <h3>Learn More:</h3>
+                <ul>
+                    <li><a href="https://www.w3schools.com/css/" target="_blank">W3Schools - CSS Tutorial</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">MDN Web Docs - CSS Guide</a></li>
+                    <li><a href="https://css-tricks.com/" target="_blank">CSS-Tricks - Tips and Techniques</a></li>
+                    <li><a href="https://www.freecodecamp.org/news/tag/css/" target="_blank">FreeCodeCamp - CSS Articles and Tutorials</a></li>
+                </ul>
+            `;
+
+            // Optionally, you can store the score in sessionStorage or send it to the server
+            const username = sessionStorage.getItem('username'); // Assuming you store the username in sessionStorage
+            if (username) {
+                // Send score to server or store it
+                console.log(`User: ${username}, Score: ${score}`);
+            }
+          }
+        }
+
+        function showDescription(questionNumber) {
+            const selectedValue = document.querySelector(`.quiz-question[data-question="${questionNumber}"] input[type="radio"]:checked`);
+            const descriptionCorrect = document.getElementById(`desc-q${questionNumber}-correct`);
+            const descriptionWrong = document.getElementById(`desc-q${questionNumber}-wrong`);
+
+            if (selectedValue) {
+                if (selectedValue.value === correctAnswers[questionNumber - 1]) {
+                    descriptionCorrect.style.display = 'block';
+                    descriptionWrong.style.display = 'none';
+                } else {
+                    descriptionCorrect.style.display = 'none';
+                    descriptionWrong.style.display = 'block';
+                }
+                // Disable radio buttons after showing description
+                document.querySelectorAll(`.quiz-question[data-question="${questionNumber}"] input[type="radio"]`).forEach((el) => {
+                    el.classList.add('disabled');
+                    el.disabled = true;
+                });
+            } else {
+                descriptionCorrect.style.display = 'none';
+                descriptionWrong.style.display = 'none';
+            }
+        }
+
+        function calculateScore() {
+            let score = 0;
+
+            // Get all the questions
+            const questions = document.querySelectorAll('.quiz-question');
+
+            questions.forEach((question) => {
+                const selectedAnswer = question.querySelector('input[type="radio"]:checked');
+                if (selectedAnswer && selectedAnswer.classList.contains('correct')) {
+                    score += 1;
+                }
+            });
+
+            return score;
+        }
+
+        function nextQuestion() {
+            const selectedValue = document.querySelector(`.quiz-question[data-question="${currentQuestion}"] input[type="radio"]:checked`);
+            if (selectedValue) {
+                currentQuestion++;
+                if (currentQuestion > totalQuestions) {
+                    showScore();
+                } else {
+                    showQuestion(currentQuestion);
+                }
+            } else {
+                alert('Please select an answer before proceeding.');
+            }
+        }
+
+        async function submitQuizResults(score) {
+
+            const submitButton = document.getElementById('finishQuizButton'); // Make sure to give your button an ID
+            submitButton.disabled = true; // Disable the button to prevent multiple clicks
+            const username = sessionStorage.getItem('username');
+            const email = sessionStorage.getItem('email');
+            const language = 'CSS'; // adjust based on your quiz logic
+            const difficulty_level = 'Beginner'; // adjust based on your quiz logic
+
+            console.log('Submitting score for:', { username, email, language: 'CSS', difficulty_level: 'Beginner', score });
+
+            const scoreData = {
+        username,
+        email,
+        language,
+        difficulty_level,
+        score,
+    };
+
+    try {
+        const response = await fetch('http://localhost:3000/submit-score', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(scoreData),
+        });
+
+        if (!response.ok) {
+            const error = response.text();
+            console.error('Error submitting score:', error);
+            //alert('Error submitting score. Please try again.');
+        } else {
+            const result = response.json();
+            console.log('Score submitted successfully:', result);
+            //alert('Score submitted successfully!');
+            showScore();
+        }
+    } catch (error) {
+        console.error('Error submitting score:', error);
+       // alert('Error submitting score. Please try again.');
+    } finally {
+        submitButton.disabled = false; // Re-enable the button if needed
+    }
+}
+        // Event listener for the finish quiz button
+        document.getElementById('finishQuizButton').addEventListener('click', () => {
+            const score = calculateScore();
+            submitQuizResults(score);
+        });
+
+        // Show the first question on load
+        showQuestion(currentQuestion);
+    </script>
+</body>
+</html>

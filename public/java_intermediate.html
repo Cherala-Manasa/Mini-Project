@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Quiz</title>
+    <link rel="stylesheet" href="quesstyles.css">
+</head>
+<body>
+    <header>
+        <h1>ProgQuiz - Java Intermediate Level</h1>
+    </header>
+    <div class="container">
+        <h2>Java Intermediate Quiz</h2>
+        <p>Test your intermediate knowledge of Java programming.</p>
+        <form id="quizForm">
+            <div class="quiz-question" data-question="1">
+                <h3>1. Which of these statements is incorrect about constructors?</h3>
+                <input type="radio" name="q1" value="A"> A. Constructors can be overloaded<br>
+                <input type="radio" name="q1" value="B"> B. Constructors cannot be inherited<br>
+                <input type="radio" name="q1" value="C" class="correct"> C. Constructors have a return type<br>
+                <input type="radio" name="q1" value="D"> D. Constructors are called when an object is created<br>
+                <div class="description incorrect" id="desc-q1-wrong">Incorrect. Constructors in Java do not have a return type. They are special methods called when an object is created.</div>
+                <div class="description correct" id="desc-q1-correct">Correct! Constructors do not have a return type, and they are used to initialize objects.</div>
+                <div class="navigation-buttons">
+                    <button type="button" class="show-description" onclick="showDescription(1)">Show Description</button>
+                    <button type="button" class="next-question" onclick="nextQuestion()">Next</button>
+                </div>
+            </div>
+            
+            <div class="quiz-question" data-question="2">
+                <h3>2. What is the default value of a local variable in Java?</h3>
+                <input type="radio" name="q2" value="A"> A. 0<br>
+                <input type="radio" name="q2" value="B"> B. null<br>
+                <input type="radio" name="q2" value="C"> C. Garbage value<br>
+                <input type="radio" name="q2" value="D" class="correct"> D. Local variables do not have a default value<br>
+                <div class="description incorrect" id="desc-q2-wrong">Incorrect. Local variables in Java do not have a default value and must be explicitly initialized before use.</div>
+                <div class="description correct" id="desc-q2-correct">Correct! Local variables in Java do not have a default value and need to be explicitly initialized.</div>
+                <div class="navigation-buttons">
+                    <button type="button" class="show-description" onclick="showDescription(2)">Show Description</button>
+                    <button type="button" class="next-question" onclick="nextQuestion()">Next</button>
+                </div>
+            </div>
+            
+            <div class="quiz-question" data-question="3">
+                <h3>3. What will be the output of the following code?</h3>
+                <pre><code>
+            public class Test {
+                public static void main(String[] args) {
+                    int x = 10;
+                    int y = 20;
+                    System.out.println(x + y + " " + (x - y) + " " + x * y);
+                }
+            }
+            </code></pre>
+                <input type="radio" name="q3" value="A"> A. 30 10 200<br>
+                <input type="radio" name="q3" value="B" class="correct"> B. 30 -10 200<br>
+                <input type="radio" name="q3" value="C"> C. 30 -10 200.0<br>
+                <input type="radio" name="q3" value="D"> D. Compilation error<br>
+                <div class="description incorrect" id="desc-q3-wrong">Incorrect. The code will output "30 -10 200". The expression `x + y` results in "30", and `(x - y)` results in "-10", with `x * y` producing "200".</div>
+                <div class="description correct" id="desc-q3-correct">Correct! The output is "30 -10 200" as the `+` operator concatenates the numbers and strings in the output.</div>
+                <div class="navigation-buttons">
+                    <button type="button" class="show-description" onclick="showDescription(3)">Show Description</button>
+                    <button type="button" class="next-question" onclick="nextQuestion()">Next</button>
+                </div>
+            </div>
+            
+            <div class="quiz-question" data-question="4">
+                <h3>4. Which of the following statements is true regarding the `this` keyword in Java?</h3>
+                <input type="radio" name="q4" value="A"> A. `this` can be used to invoke the current class method<br>
+                <input type="radio" name="q4" value="B"> B. `this` can be used to invoke the current class constructor<br>
+                <input type="radio" name="q4" value="C"> C. `this` can be passed as an argument in the method call<br>
+                <input type="radio" name="q4" value="D" class="correct"> D. All of the above<br>
+                <div class="description incorrect" id="desc-q4-wrong">Incorrect. `this` keyword in Java can be used for all the mentioned uses: invoking methods, constructors, and passing as an argument.</div>
+                <div class="description correct" id="desc-q4-correct">Correct! The `this` keyword can be used to invoke methods and constructors within the same class, and it can also be passed as an argument.</div>
+                <div class="navigation-buttons">
+                    <button type="button" class="show-description" onclick="showDescription(4)">Show Description</button>
+                    <button type="button" class="next-question" onclick="nextQuestion()">Next</button>
+                </div>
+            </div>
+            
+            <div class="quiz-question" data-question="5">
+                <h3>5. Which of the following is not a feature of the Java programming language?</h3>
+                <input type="radio" name="q5" value="A"> A. Object-oriented<br>
+                <input type="radio" name="q5" value="B"> B. Platform-independent<br>
+                <input type="radio" name="q5" value="C" class="correct"> C. Single inheritance<br>
+                <input type="radio" name="q5" value="D"> D. Garbage collection<br>
+                <div class="description incorrect" id="desc-q5-wrong">Incorrect. Java supports multiple inheritance through interfaces and has garbage collection, among other features.</div>
+                <div class="description correct" id="desc-q5-correct">Correct! Single inheritance is not a feature of Java; it supports multiple inheritance through interfaces.</div>
+                <div class="navigation-buttons">
+                    <button type="button" class="show-description" onclick="showDescription(5)">Show Description</button>
+                    <button type="button" class="next-question" onclick="nextQuestion()">Next</button>
+                </div>
+            </div>
+            
+            <div class="quiz-question" data-question="6">
+                <h3>6. What will be the output of the following code?</h3>
+                <pre><code>
+            public class Test {
+                public static void main(String[] args) {
+                    int x = 5;
+                    int y = 10;
+                    System.out.println(++x * y--);
+                    System.out.println(x);
+                    System.out.println(y);
+                }
+            }
+            </code></pre>
+                <input type="radio" name="q6" value="A"> A. 60, 5, 10<br>
+                <input type="radio" name="q6" value="B"> B. 50, 6, 9<br>
+                <input type="radio" name="q6" value="C" class="correct"> C. 60, 6, 9<br>
+                <input type="radio" name="q6" value="D"> D. 50, 5, 10<br>
+                <div class="description incorrect" id="desc-q6-wrong">Incorrect. The output is 60, 6, 9 because `++x` increments `x` before multiplication, and `y--` decrements `y` after multiplication.</div>
+                <div class="description correct" id="desc-q6-correct">Correct! The code prints 60 (result of `++x * y--`), then `x` is 6 and `y` is 9 after the operations.</div>
+                <div class="navigation-buttons">
+                    <button type="button" class="show-description" onclick="showDescription(6)">Show Description</button>
+                    <button type="button" class="next-question" onclick="nextQuestion()">Next</button>
+                </div>
+            </div>
+            
+            <div class="quiz-question" data-question="7">
+                <h3>7. What will be the output of the following code?</h3>
+                <pre><code>
+            public class Test {
+                public static void main(String[] args) {
+                    System.out.println("Hello" + 1 + 2 + 3);
+                    System.out.println(1 + 2 + 3 + "Hello");
+                }
+            }
+            </code></pre>
+                <input type="radio" name="q7" value="A" class="correct"> A. Hello123, 6Hello<br>
+                <input type="radio" name="q7" value="B"> B. Hello6, 6Hello<br>
+                <input type="radio" name="q7" value="C"> C. Hello123, Hello123<br>
+                <input type="radio" name="q7" value="D"> D. Hello6, Hello6<br>
+                <div class="description incorrect" id="desc-q7-wrong">Incorrect. The first line concatenates "Hello" with the numbers resulting in "Hello123", while the second line performs arithmetic before concatenating "Hello".</div>
+                <div class="description correct" id="desc-q7-correct">Correct! The first output is "Hello123" and the second is "6Hello".</div>
+                <div class="navigation-buttons">
+                    <button type="button" class="show-description" onclick="showDescription(7)">Show Description</button>
+                    <button type="button" class="next-question" onclick="nextQuestion()">Next</button>
+                </div>
+            </div>
+            
+            <div class="quiz-question" data-question="8">
+                <h3>8. The StringBuilder class is immutable.</h3>
+                <input type="radio" name="q8" value="A"> A. True<br>
+                <input type="radio" name="q8" value="B" class="correct"> B. False<br>
+                <div class="description incorrect" id="desc-q8-wrong">Incorrect. The `StringBuilder` class is mutable, meaning its content can be changed after it is created.</div>
+                <div class="description correct" id="desc-q8-correct">Correct! The `StringBuilder` class is mutable, unlike `String`, which is immutable.</div>
+                <div class="navigation-buttons">
+                    <button type="button" class="show-description" onclick="showDescription(8)">Show Description</button>
+                    <button type="button" class="next-question" onclick="nextQuestion()">Next</button>
+                </div>
+            </div>
+            
+            <div class="quiz-question" data-question="9">
+                <h3>9. What will be the output of the following code?</h3>
+                <pre><code>
+            public class Test {
+                public static void main(String[] args) {
+                    String str1 = "Hello";
+                    String str2 = "Hello";
+                    String str3 = new String("Hello");
+                    System.out.println(str1 == str2);
+                    System.out.println(str1 == str3);
+                    System.out.println(str1.equals(str3));
+                }
+            }
+            </code></pre>
+                <input type="radio" name="q9" value="A" class="correct"> A. true, false, true<br>
+                <input type="radio" name="q9" value="B"> B. false, false, true<br>
+                <input type="radio" name="q9" value="C"> C. true, true, false<br>
+                <input type="radio" name="q9" value="D"> D. false, true, true<br>
+                <div class="description incorrect" id="desc-q9-wrong">Incorrect. The `==` operator compares references, so `str1` and `str2` refer to the same object, while `str3` is a new object. The `equals` method compares content.</div>
+                <div class="description correct" id="desc-q9-correct">Correct! `str1 == str2` is true (same reference), `str1 == str3` is false (different reference), and `str1.equals(str3)` is true (same content).</div>
+                <div class="navigation-buttons">
+                    <button type="button" class="show-description" onclick="showDescription(9)">Show Description</button>
+                    <button type="button" class="next-question" onclick="nextQuestion()">Next</button>
+                </div>
+            </div>
+            
+            <div class="quiz-question" data-question="10">
+                <h3>10. Identify the error in the following code</h3>
+                <pre><code>
+            public class Test {
+                public static void main(String[] args) {
+                    int x = 5;
+                    int y = 0;
+                    System.out.println(x / y);
+                }
+            }
+            </code></pre>
+                <input type="radio" name="q10" value="A" class="correct"> A. ArithmeticException: / by zero<br>
+                <input type="radio" name="q10" value="B"> B. ArrayIndexOutOfBoundsException<br>
+                <div class="description incorrect" id="desc-q10-wrong">Incorrect. Division by zero in Java will result in an `ArithmeticException`.</div>
+                <div class="description correct" id="desc-q10-correct">Correct! The code will throw an `ArithmeticException` because division by zero is not allowed in Java.</div>
+                <div class="navigation-buttons">
+                    <button type="button" class="show-description" onclick="showDescription(10)">Show Description</button>
+                    <button type="button" class="next-question" id="finishQuizButton" onclick="submitQuiz()">Finish Quiz</button>
+                </div>
+            </div>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script>
+        let currentQuestion = 1;
+        const totalQuestions = 10;
+        const correctAnswers = ['C', 'D', 'B', 'D', 'C', 'C', 'A', 'B', 'A', 'A']
+
+        function showQuestion(questionNumber) {
+            document.querySelectorAll('.quiz-question').forEach((el) => {
+                el.style.display = 'none';
+            });
+            document.querySelector(`.quiz-question[data-question="${questionNumber}"]`).style.display = 'block';
+        }
+
+        function submitQuiz() {
+            let score = 0;
+
+            // Loop through all questions and check answers
+            for (let i = 1; i <= totalQuestions; i++) {
+            const selectedAnswer = document.querySelector(`input[name="q${i}"]:checked`);
+            if (selectedAnswer) {
+                if (selectedAnswer.classList.contains('correct')) {
+                    score++;
+                }
+            }
+            // Display the result
+            const resultContainer = document.getElementById('result');
+            resultContainer.innerHTML = `<h2>Your Score: ${score} out of ${totalQuestions}</h2>`;
+
+            if (score === totalQuestions) {
+                quote = "🎉 Excellent work! You nailed every question! 🎉";
+            } else if (score >= totalQuestions * 0.7) {
+                quote = "👍 Great job! You're quite knowledgeable in JAVA! 👍";
+            } else {
+                quote = "💪 Good effort! Keep practicing to improve your skills! 💪";
+            }
+
+            document.getElementById('result').innerHTML = `
+                <h2>Your score is ${score} out of ${totalQuestions}.</h2>
+                <div class="quote">${quote}</div>
+                <h3>Learn More:</h3>
+                <ul>
+                    <li><a href="https://www.learnjavaonline.org" target="_blank">Learn Java - A Free Interactive Java Tutorial</a></li>
+                    <li><a href="https://www.tutorialspoint.com/java/index.htm" target="_blank">TutorialsPoint - Java Programming</a></li>
+                    <li><a href="https://www.geeksforgeeks.org/java/" target="_blank">GeeksforGeeks - Java Programming Language</a></li>
+                    <li><a href="https://www.oracle.com/java/technologies/javase-overview.html" target="_blank">Oracle - Java Technologies Overview</a></li>
+                </ul>
+            `;
+
+            // Optionally, you can store the score in sessionStorage or send it to the server
+            const username = sessionStorage.getItem('username'); // Assuming you store the username in sessionStorage
+            if (username) {
+                // Send score to server or store it
+                console.log(`User: ${username}, Score: ${score}`);
+            }
+          }
+        }
+
+        function showDescription(questionNumber) {
+            const selectedValue = document.querySelector(`.quiz-question[data-question="${questionNumber}"] input[type="radio"]:checked`);
+            const descriptionCorrect = document.getElementById(`desc-q${questionNumber}-correct`);
+            const descriptionWrong = document.getElementById(`desc-q${questionNumber}-wrong`);
+
+            if (selectedValue) {
+                if (selectedValue.value === correctAnswers[questionNumber - 1]) {
+                    descriptionCorrect.style.display = 'block';
+                    descriptionWrong.style.display = 'none';
+                } else {
+                    descriptionCorrect.style.display = 'none';
+                    descriptionWrong.style.display = 'block';
+                }
+                // Disable radio buttons after showing description
+                document.querySelectorAll(`.quiz-question[data-question="${questionNumber}"] input[type="radio"]`).forEach((el) => {
+                    el.classList.add('disabled');
+                    el.disabled = true;
+                });
+            } else {
+                descriptionCorrect.style.display = 'none';
+                descriptionWrong.style.display = 'none';
+            }
+        }
+
+        function calculateScore() {
+            let score = 0;
+
+            // Get all the questions
+            const questions = document.querySelectorAll('.quiz-question');
+
+            questions.forEach((question) => {
+                const selectedAnswer = question.querySelector('input[type="radio"]:checked');
+                if (selectedAnswer && selectedAnswer.classList.contains('correct')) {
+                    score += 1;
+                }
+            });
+
+            return score;
+        }
+
+        function nextQuestion() {
+            const selectedValue = document.querySelector(`.quiz-question[data-question="${currentQuestion}"] input[type="radio"]:checked`);
+            if (selectedValue) {
+                currentQuestion++;
+                if (currentQuestion > totalQuestions) {
+                    showScore();
+                } else {
+                    showQuestion(currentQuestion);
+                }
+            } else {
+                alert('Please select an answer before proceeding.');
+            }
+        }
+
+        async function submitQuizResults(score) {
+
+            const submitButton = document.getElementById('finishQuizButton'); // Make sure to give your button an ID
+            submitButton.disabled = true; // Disable the button to prevent multiple clicks
+            const username = sessionStorage.getItem('username');
+            const email = sessionStorage.getItem('email');
+            const language = 'Java'; // adjust based on your quiz logic
+            const difficulty_level = 'Intermediate'; // adjust based on your quiz logic
+
+            console.log('Submitting score for:', { username, email, language: 'Java', difficulty_level: 'Intermediate', score });
+
+            const scoreData = {
+        username,
+        email,
+        language,
+        difficulty_level,
+        score,
+    };
+
+    try {
+        const response = await fetch('http://localhost:3000/submit-score', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(scoreData),
+        });
+
+        if (!response.ok) {
+            const error = response.text();
+            console.error('Error submitting score:', error);
+            //alert('Error submitting score. Please try again.');
+        } else {
+            const result = response.json();
+            console.log('Score submitted successfully:', result);
+            //alert('Score submitted successfully!');
+            showScore();
+        }
+    } catch (error) {
+        console.error('Error submitting score:', error);
+       // alert('Error submitting score. Please try again.');
+    } finally {
+        submitButton.disabled = false; // Re-enable the button if needed
+    }
+}
+        // Event listener for the finish quiz button
+        document.getElementById('finishQuizButton').addEventListener('click', () => {
+            const score = calculateScore();
+            submitQuizResults(score);
+        });
+
+        // Show the first question on load
+        showQuestion(currentQuestion);
+    </script>
+</body>
+</html>

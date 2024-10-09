@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intermediate HTML Language Quiz</title>
+    <link rel="stylesheet" href="quesstyles.css">
+</head>
+<body>
+    <header>
+        <h1>ProgQuiz - HTML Language Intermediate Level</h1>
+    </header>
+    <div class="container">
+        <h2>Intermediate HTML Language Quiz</h2>
+        <p>Test your intermediate knowledge of HTML.</p>
+        <form id="quizForm">
+            <!-- Multiple Choice Questions -->
+            <div class="quiz-question" data-question="1">
+                <h3>1. Which HTML element is used to specify a footer for a document or section?</h3>
+                <input type="radio" name="q1" value="A" class="correct"> A. &lt;footer&gt;<br>
+                <input type="radio" name="q1" value="B"> B. &lt;bottom&gt;<br>
+                <input type="radio" name="q1" value="C"> C. &lt;foot&gt;<br>
+                <input type="radio" name="q1" value="D"> D. &lt;section-footer&gt;<br>
+                <div class="description incorrect" id="desc-q1-wrong">Incorrect. Use &lt;footer&gt; to specify a footer for a document or section.</div>
+                <div class="description correct" id="desc-q1-correct">Correct! Use &lt;footer&gt; to specify a footer for a document or section.</div>
+                <div class="navigation-buttons">
+                    <button type="button" class="show-description" onclick="showDescription(1)">Show Description</button>
+                    <button type="button" class="next-question" onclick="nextQuestion()">Next</button>
+                </div>
+            </div>
+            
+            <div class="quiz-question" data-question="2">
+                <h3>2. What does the &lt;canvas&gt; element in HTML5 do?</h3>
+                <input type="radio" name="q2" value="A" class="correct"> A. Displays a canvas for drawing graphics<br>
+                <input type="radio" name="q2" value="B"> B. Embeds a video file<br>
+                <input type="radio" name="q2" value="C"> C. Adds a canvas texture to an image<br>
+                <input type="radio" name="q2" value="D"> D. Provides a framework for canvas design<br>
+                <div class="description incorrect" id="desc-q2-wrong">Incorrect. The &lt;canvas&gt; element is used to display a canvas for drawing graphics.</div>
+                <div class="description correct" id="desc-q2-correct">Correct! The &lt;canvas&gt; element is used to display a canvas for drawing graphics.</div>
+                <div class="navigation-buttons">
+                    <button type="button" class="show-description" onclick="showDescription(2)">Show Description</button>
+                    <button type="button" class="next-question" onclick="nextQuestion()">Next</button>
+                </div>
+            </div>
+            
+            <div class="quiz-question" data-question="3">
+                <h3>3. Which attribute is used to specify that an input field must be filled out before submitting the form?</h3>
+                <input type="radio" name="q3" value="A"> A. placeholder<br>
+                <input type="radio" name="q3" value="B" class="correct"> B. required<br>
+                <input type="radio" name="q3" value="C"> C. validate<br>
+                <input type="radio" name="q3" value="D"> D. must<br>
+                <div class="description incorrect" id="desc-q3-wrong">Incorrect. Use the 'required' attribute to ensure an input field is filled out before form submission.</div>
+                <div class="description correct" id="desc-q3-correct">Correct! Use the 'required' attribute to ensure an input field is filled out before form submission.</div>
+                <div class="navigation-buttons">
+                    <button type="button" class="show-description" onclick="showDescription(3)">Show Description</button>
+                    <button type="button" class="next-question" onclick="nextQuestion()">Next</button>
+                </div>
+            </div>
+            
+            <div class="quiz-question" data-question="4">
+                <h3>4. What is the purpose of the &lt;nav&gt; element in HTML?</h3>
+                <input type="radio" name="q4" value="A" class="correct"> A. To define a section for navigation links<br>
+                <input type="radio" name="q4" value="B"> B. To create a new paragraph<br>
+                <input type="radio" name="q4" value="C"> C. To specify an image map<br>
+                <input type="radio" name="q4" value="D"> D. To include a navigation bar<br>
+                <div class="description incorrect" id="desc-q4-wrong">Incorrect. The &lt;nav&gt; element is used to define a section for navigation links.</div>
+                <div class="description correct" id="desc-q4-correct">Correct! The &lt;nav&gt; element is used to define a section for navigation links.</div>
+                <div class="navigation-buttons">
+                    <button type="button" class="show-description" onclick="showDescription(4)">Show Description</button>
+                    <button type="button" class="next-question" onclick="nextQuestion()">Next</button>
+                </div>
+            </div>
+            
+            <div class="quiz-question" data-question="5">
+                <h3>5. How do you create a hyperlink in HTML?</h3>
+                <input type="radio" name="q5" value="A"> A. &lt;link&gt;http://example.com&lt;/link&gt;<br>
+                <input type="radio" name="q5" value="B" class="correct"> B. &lt;a href="http://example.com"&gt;This is a link&lt;/a&gt;<br>
+                <input type="radio" name="q5" value="C"> C. &lt;url&gt;http://example.com&lt;/url&gt;<br>
+                <input type="radio" name="q5" value="D"> D. &lt;hyperlink&gt;http://example.com&lt;/hyperlink&gt;<br>
+                <div class="description incorrect" id="desc-q5-wrong">Incorrect. Use &lt;a href="http://example.com"&gt; to create a hyperlink in HTML.</div>
+                <div class="description correct" id="desc-q5-correct">Correct! Use &lt;a href="http://example.com"&gt; to create a hyperlink in HTML.</div>
+                <div class="navigation-buttons">
+                    <button type="button" class="show-description" onclick="showDescription(5)">Show Description</button>
+                    <button type="button" class="next-question" onclick="nextQuestion()">Next</button>
+                </div>
+            </div>
+            
+            <!-- Code Snippet Questions -->
+            <div class="quiz-question" data-question="6">
+                <h3>6. What is the correct way to include an image in HTML?</h3>
+                <input type="radio" name="q6" value="A"> A. &lt;image src="image.jpg"&gt;<br>
+                <input type="radio" name="q6" value="B" class="correct"> B. &lt;img src="image.jpg" alt="My Image"&gt;<br>
+                <input type="radio" name="q6" value="C"> C. &lt;img href="image.jpg"&gt;<br>
+                <input type="radio" name="q6" value="D"> D. &lt;pic src="image.jpg" alt="My Image"&gt;<br>
+                <div class="description incorrect" id="desc-q6-wrong">Incorrect. Use &lt;img src="image.jpg" alt="My Image"&gt; to include an image in HTML.</div>
+                <div class="description correct" id="desc-q6-correct">Correct! Use &lt;img src="image.jpg" alt="My Image"&gt; to include an image in HTML.</div>
+                <div class="navigation-buttons">
+                    <button type="button" class="show-description" onclick="showDescription(6)">Show Description</button>
+                    <button type="button" class="next-question" onclick="nextQuestion()">Next</button>
+                </div>
+            </div>
+            
+            <div class="quiz-question" data-question="7">
+                <h3>7. What is the correct HTML for making a text area?</h3>
+                <input type="radio" name="q7" value="A"> A. &lt;input type="textarea"&gt;<br>
+                <input type="radio" name="q7" value="B"> B. &lt;input type="text"&gt;<br>
+                <input type="radio" name="q7" value="C" class="correct"> C. &lt;textarea&gt;Your text here&lt;/textarea&gt;<br>
+                <input type="radio" name="q7" value="D"> D. &lt;input textarea&gt;<br>
+                <div class="description incorrect" id="desc-q7-wrong">Incorrect. Use &lt;textarea&gt;Your text here&lt;/textarea&gt; to create a text area.</div>
+                <div class="description correct" id="desc-q7-correct">Correct! Use &lt;textarea&gt;Your text here&lt;/textarea&gt; to create a text area.</div>
+                <div class="navigation-buttons">
+                    <button type="button" class="show-description" onclick="showDescription(7)">Show Description</button>
+                    <button type="button" class="next-question" onclick="nextQuestion()">Next</button>
+                </div>
+            </div>
+            
+            <div class="quiz-question" data-question="8">
+                <h3>8. What is the purpose of the &lt;meta&gt; tag in HTML?</h3>
+                <input type="radio" name="q8" value="A" class="correct"> A. To include metadata about the document<br>
+                <input type="radio" name="q8" value="B"> B. To add a navigation menu<br>
+                <input type="radio" name="q8" value="C"> C. To create a footer<br>
+                <input type="radio" name="q8" value="D"> D. To embed multimedia content<br>
+                <div class="description incorrect" id="desc-q8-wrong">Incorrect. The &lt;meta&gt; tag is used to include metadata about the document.</div>
+                <div class="description correct" id="desc-q8-correct">Correct! The &lt;meta&gt; tag is used to include metadata about the document.</div>
+                <div class="navigation-buttons">
+                    <button type="button" class="show-description" onclick="showDescription(8)">Show Description</button>
+                    <button type="button" class="next-question" onclick="nextQuestion()">Next</button>
+                </div>
+            </div>
+            
+            <div class="quiz-question" data-question="9">
+                <h3>9. Which HTML attribute specifies an alternate text for an image, if the image cannot be displayed?</h3>
+                <input type="radio" name="q9" value="A"> A. src<br>
+                <input type="radio" name="q9" value="B" class="correct"> B. alt<br>
+                <input type="radio" name="q9" value="C"> C. title<br>
+                <input type="radio" name="q9" value="D"> D. link<br>
+                <div class="description incorrect" id="desc-q9-wrong">Incorrect. Use the 'alt' attribute to specify alternate text for an image if it cannot be displayed.</div>
+                <div class="description correct" id="desc-q9-correct">Correct! Use the 'alt' attribute to specify alternate text for an image if it cannot be displayed.</div>
+                <div class="navigation-buttons">
+                    <button type="button" class="show-description" onclick="showDescription(9)">Show Description</button>
+                    <button type="button" class="next-question" onclick="nextQuestion()">Next</button>
+                </div>
+            </div>
+            
+            <div class="quiz-question" data-question="10">
+                <h3>10. What is the correct HTML for inserting a line break?</h3>
+                <input type="radio" name="q10" value="A"> A. &lt;break&gt;<br>
+                <input type="radio" name="q10" value="B" class="correct"> B. &lt;br&gt;<br>
+                <input type="radio" name="q10" value="C"> C. &lt;lb&gt;<br>
+                <input type="radio" name="q10" value="D"> D. &lt;newline&gt;<br>
+                <div class="description incorrect" id="desc-q10-wrong">Incorrect. Use &lt;br&gt; to insert a line break in HTML.</div>
+                <div class="description correct" id="desc-q10-correct">Correct! Use &lt;br&gt; to insert a line break in HTML.</div>
+                <div class="navigation-buttons">
+                    <button type="button" class="show-description" onclick="showDescription(10)">Show Description</button>
+                    <button type="button" class="next-question" id="finishQuizButton" onclick="submitQuiz()">Finish Quiz</button>
+                </div>
+            </div>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script>
+        let currentQuestion = 1;
+        const totalQuestions = 10;
+        const correctAnswers = ['A', 'A', 'B', 'A', 'B', 'B', 'C', 'A', 'B', 'B'];
+
+        function showQuestion(questionNumber) {
+            document.querySelectorAll('.quiz-question').forEach((el) => {
+                el.style.display = 'none';
+            });
+            document.querySelector(`.quiz-question[data-question="${questionNumber}"]`).style.display = 'block';
+        }
+
+        function submitQuiz() {
+            let score = 0;
+
+            // Loop through all questions and check answers
+            for (let i = 1; i <= totalQuestions; i++) {
+            const selectedAnswer = document.querySelector(`input[name="q${i}"]:checked`);
+            if (selectedAnswer) {
+                if (selectedAnswer.classList.contains('correct')) {
+                    score++;
+                }
+            }
+            // Display the result
+            const resultContainer = document.getElementById('result');
+            resultContainer.innerHTML = `<h2>Your Score: ${score} out of ${totalQuestions}</h2>`;
+
+            if (score === totalQuestions) {
+                quote = "🎉 Excellent work! You nailed every question! 🎉";
+            } else if (score >= totalQuestions * 0.7) {
+                quote = "👍 Great job! You're quite knowledgeable in HTML! 👍";
+            } else {
+                quote = "💪 Good effort! Keep practicing to improve your skills! 💪";
+            }
+
+            document.getElementById('result').innerHTML = `
+                <h2>Your score is ${score} out of ${totalQuestions}.</h2>
+                <div class="quote">${quote}</div>
+                <h3>Learn More:</h3>
+                <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">MDN Web Docs - HTML</a></li>
+                    <li><a href="https://www.w3schools.com/html/" target="_blank">W3Schools - HTML Tutorial</a></li>
+                    <li><a href="https://html.com/" target="_blank">HTML.com - HTML Basics</a></li>
+                </ul>
+            `;
+
+            // Optionally, you can store the score in sessionStorage or send it to the server
+            const username = sessionStorage.getItem('username'); // Assuming you store the username in sessionStorage
+            if (username) {
+                // Send score to server or store it
+                console.log(`User: ${username}, Score: ${score}`);
+            }
+          }
+        }
+
+        function showDescription(questionNumber) {
+            const selectedValue = document.querySelector(`.quiz-question[data-question="${questionNumber}"] input[type="radio"]:checked`);
+            const descriptionCorrect = document.getElementById(`desc-q${questionNumber}-correct`);
+            const descriptionWrong = document.getElementById(`desc-q${questionNumber}-wrong`);
+
+            if (selectedValue) {
+                if (selectedValue.value === correctAnswers[questionNumber - 1]) {
+                    descriptionCorrect.style.display = 'block';
+                    descriptionWrong.style.display = 'none';
+                } else {
+                    descriptionCorrect.style.display = 'none';
+                    descriptionWrong.style.display = 'block';
+                }
+                // Disable radio buttons after showing description
+                document.querySelectorAll(`.quiz-question[data-question="${questionNumber}"] input[type="radio"]`).forEach((el) => {
+                    el.classList.add('disabled');
+                    el.disabled = true;
+                });
+            } else {
+                descriptionCorrect.style.display = 'none';
+                descriptionWrong.style.display = 'none';
+            }
+        }
+
+        function calculateScore() {
+            let score = 0;
+
+            // Get all the questions
+            const questions = document.querySelectorAll('.quiz-question');
+
+            questions.forEach((question) => {
+                const selectedAnswer = question.querySelector('input[type="radio"]:checked');
+                if (selectedAnswer && selectedAnswer.classList.contains('correct')) {
+                    score += 1;
+                }
+            });
+
+            return score;
+        }
+
+        function nextQuestion() {
+            const selectedValue = document.querySelector(`.quiz-question[data-question="${currentQuestion}"] input[type="radio"]:checked`);
+            if (selectedValue) {
+                currentQuestion++;
+                if (currentQuestion > totalQuestions) {
+                    showScore();
+                } else {
+                    showQuestion(currentQuestion);
+                }
+            } else {
+                alert('Please select an answer before proceeding.');
+            }
+        }
+
+        async function submitQuizResults(score) {
+
+            const submitButton = document.getElementById('finishQuizButton'); // Make sure to give your button an ID
+            submitButton.disabled = true; // Disable the button to prevent multiple clicks
+            const username = sessionStorage.getItem('username');
+            const email = sessionStorage.getItem('email');
+            const language = 'HTML'; // adjust based on your quiz logic
+            const difficulty_level = 'Intermediate'; // adjust based on your quiz logic
+
+            console.log('Submitting score for:', { username, email, language: 'HTML', difficulty_level: 'Intermediate', score });
+
+            const scoreData = {
+        username,
+        email,
+        language,
+        difficulty_level,
+        score,
+    };
+
+    try {
+        const response = await fetch('http://localhost:3000/submit-score', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(scoreData),
+        });
+
+        if (!response.ok) {
+            const error = response.text();
+            console.error('Error submitting score:', error);
+            //alert('Error submitting score. Please try again.');
+        } else {
+            const result = response.json();
+            console.log('Score submitted successfully:', result);
+            //alert('Score submitted successfully!');
+            showScore();
+        }
+    } catch (error) {
+        console.error('Error submitting score:', error);
+       // alert('Error submitting score. Please try again.');
+    } finally {
+        submitButton.disabled = false; // Re-enable the button if needed
+    }
+}
+        // Event listener for the finish quiz button
+        document.getElementById('finishQuizButton').addEventListener('click', () => {
+            const score = calculateScore();
+            submitQuizResults(score);
+        });
+
+        // Show the first question on load
+        showQuestion(currentQuestion);
+    </script>
+</body>
+</html>

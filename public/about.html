@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProgQuiz - About Us</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap');
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            animation: slideInDown 1s ease-out;
+        }
+
+        header {
+            background-color: #34495e;
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-weight: 700;
+        }
+
+        nav {
+            background-color: #2c3e50;
+            padding: 10px 0;
+            text-align: center;
+            animation: slideInDown 1s ease-out;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #ffffff;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            display: inline-block;
+            font-weight: 400;
+        }
+
+        nav a:hover {
+            background-color: #1abc9c;
+            transform: translateX(10px);
+        }
+
+        .container {
+            flex-grow: 1;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            animation: zoomIn 1s ease-out;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2.2em;
+            font-weight: 700;
+        }
+
+        p {
+            text-align: center;
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px 0;
+            animation: slideInUp 1s ease-out;
+        }
+
+        @keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-100px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes zoomIn {
+            0% {
+                transform: scale(0.9);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(100px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>ProgQuiz - About Us</h1>
+    </header>
+
+    <nav>
+        <a href="main.html">Home</a>
+        <a href="c.html">C</a>
+        <a href="cpp.html">C++</a>
+        <a href="java.html">Java</a>
+        <a href="html.html">HTML</a>
+        <a href="css.html">CSS</a>
+        <a href="javascript.html">JavaScript</a>
+    </nav>
+
+    <div class="container">
+        <h2>About ProgQuiz</h2>
+        <p>ProgQuiz is an interactive platform designed to help individuals test and improve their programming skills. Our quizzes cover various programming languages and offer different difficulty levels to cater to both beginners and advanced learners.</p>
+        <p>We believe that practice is key to mastering programming, and our goal is to provide a fun and engaging way to practice coding skills.</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 ProgQuiz. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

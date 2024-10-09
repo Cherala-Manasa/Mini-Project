@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ Language Quiz</title>
+    <link rel="stylesheet" href="quesstyles.css">
+</head>
+<body>
+    <header>
+        <h1>ProgQuiz - C++ Language Intermediate Level</h1>
+    </header>
+    <div class="container">
+        <h2>C++ Language Intermediate Quiz</h2>
+        <p>Test your intermediate knowledge of C++ programming  Language.</p>
+        <form id="quizForm">
+            <div class="quiz-question" data-question="1">
+                <h3>1. Which of the following is used to handle exceptions in C++?</h3>
+                <input type="radio" name="q1" value="A"> A. catch<br>
+                <input type="radio" name="q1" value="B"> B. throw<br>
+                <input type="radio" name="q1" value="C"> C. try<br>
+                <input type="radio" name="q1" value="D" class="correct"> D. All of the above<br>
+                <div class="description incorrect" id="desc-q1-wrong">Incorrect. The correct answer is 'D. All of the above'. All of these keywords are used in exception handling in C++.</div>
+                <div class="description correct" id="desc-q1-correct">Correct! All of these keywords are used in exception handling in C++.</div>
+                <div class="navigation-buttons">
+                    <button type="button" class="show-description" onclick="showDescription(1)">Show Description</button>
+                    <button type="button" class="next-question" onclick="nextQuestion()">Next</button>
+                </div>
+            </div>
+            
+            <div class="quiz-question" data-question="2">
+                <h3>2. What is the purpose of the 'virtual' keyword in C++?</h3>
+                <input type="radio" name="q2" value="A"> A. To create static member functions<br>
+                <input type="radio" name="q2" value="B"> B. To enable function overloading<br>
+                <input type="radio" name="q2" value="C" class="correct"> C. To ensure runtime polymorphism<br>
+                <input type="radio" name="q2" value="D"> D. To define a constant<br>
+                <div class="description incorrect" id="desc-q2-wrong">Incorrect. The correct answer is 'C. To ensure runtime polymorphism'. The 'virtual' keyword is used to achieve runtime polymorphism in C++.</div>
+                <div class="description correct" id="desc-q2-correct">Correct! The 'virtual' keyword is used to ensure runtime polymorphism in C++.</div>
+                <div class="navigation-buttons">
+                    <button type="button" class="show-description" onclick="showDescription(2)">Show Description</button>
+                    <button type="button" class="next-question" onclick="nextQuestion()">Next</button>
+                </div>
+            </div>
+            
+            <div class="quiz-question" data-question="3">
+                <h3>3. Which of the following containers is not part of the C++ Standard Library?</h3>
+                <input type="radio" name="q3" value="A"> A. vector<br>
+                <input type="radio" name="q3" value="B"> B. list<br>
+                <input type="radio" name="q3" value="C" class="correct"> C. array<br>
+                <input type="radio" name="q3" value="D"> D. map<br>
+                <div class="description incorrect" id="desc-q3-wrong">Incorrect. The correct answer is 'C. array'. The Standard Library container classes are vector, list, and map, but array is not part of it.</div>
+                <div class="description correct" id="desc-q3-correct">Correct! The 'array' container is not part of the C++ Standard Library. The correct containers are vector, list, and map.</div>
+                <div class="navigation-buttons">
+                    <button type="button" class="show-description" onclick="showDescription(3)">Show Description</button>
+                    <button type="button" class="next-question" onclick="nextQuestion()">Next</button>
+                </div>
+            </div>
+            
+            <div class="quiz-question" data-question="4">
+                <h3>4. What is the purpose of the 'friend' keyword in C++?</h3>
+                <input type="radio" name="q4" value="A" class="correct"> A. To allow access to private members of a class<br>
+                <input type="radio" name="q4" value="B"> B. To create a private class<br>
+                <input type="radio" name="q4" value="C"> C. To declare a global function<br>
+                <input type="radio" name="q4" value="D"> D. To protect members of a class<br>
+                <div class="description incorrect" id="desc-q4-wrong">Incorrect. The correct answer is 'A. To allow access to private members of a class'. The 'friend' keyword grants access to private and protected members of a class.</div>
+                <div class="description correct" id="desc-q4-correct">Correct! The 'friend' keyword is used to allow access to private and protected members of a class.</div>
+                <div class="navigation-buttons">
+                    <button type="button" class="show-description" onclick="showDescription(4)">Show Description</button>
+                    <button type="button" class="next-question" onclick="nextQuestion()">Next</button>
+                </div>
+            </div>
+            
+            <div class="quiz-question" data-question="5">
+                <h3>5. What does the 'mutable' keyword allow you to do in C++?</h3>
+                <input type="radio" name="q5" value="A" class="correct"> A. Modify const member variables<br>
+                <input type="radio" name="q5" value="B"> B. Change the access specifier<br>
+                <input type="radio" name="q5" value="C"> C. Create a new variable<br>
+                <input type="radio" name="q5" value="D"> D. Define a static member<br>
+                <div class="description incorrect" id="desc-q5-wrong">Incorrect. The correct answer is 'A. Modify const member variables'. The 'mutable' keyword allows modification of member variables even if they are in a 'const' member function.</div>
+                <div class="description correct" id="desc-q5-correct">Correct! The 'mutable' keyword allows modification of const member variables.</div>
+                <div class="navigation-buttons">
+                    <button type="button" class="show-description" onclick="showDescription(5)">Show Description</button>
+                    <button type="button" class="next-question" onclick="nextQuestion()">Next</button>
+                </div>
+            </div>
+            
+            <div class="quiz-question" data-question="6">
+                <h3>6. What is the output of the following code snippet?</h3>
+                <pre><code>int main() {<br>
+                &nbsp;&nbsp;int a = 5, b = 10;<br>
+                &nbsp;&nbsp;cout << a << " " << b << endl;<br>
+                &nbsp;&nbsp;swap(a, b);<br>
+                &nbsp;&nbsp;cout << a << " " << b << endl;<br>
+                &nbsp;&nbsp;return 0;<br>
+                }</code></pre>
+                <input type="radio" name="q6" value="A"> A. 5 10<br>
+                <input type="radio" name="q6" value="B" class="correct"> B. 10 5<br>
+                <input type="radio" name="q6" value="C"> C. 5 5<br>
+                <input type="radio" name="q6" value="D"> D. 10 10<br>
+                <div class="description incorrect" id="desc-q6-wrong">Incorrect. The correct answer is 'B. 10 5'. The 'swap' function exchanges the values of 'a' and 'b'.</div>
+                <div class="description correct" id="desc-q6-correct">Correct! The 'swap' function exchanges the values of 'a' and 'b', so the output is '10 5'.</div>
+                <div class="navigation-buttons">
+                    <button type="button" class="show-description" onclick="showDescription(6)">Show Description</button>
+                    <button type="button" class="next-question" onclick="nextQuestion()">Next</button>
+                </div>
+            </div>
+            
+            <div class="quiz-question" data-question="7">
+                <h3>7. What is the output of the following code snippet?</h3>
+                <pre><code>int main() {<br>
+                &nbsp;&nbsp;int x = 1;<br>
+                &nbsp;&nbsp;int y = x++ + ++x;<br>
+                &nbsp;&nbsp;cout << y << endl;<br>
+                &nbsp;&nbsp;return 0;<br>
+                }</code></pre>
+                <input type="radio" name="q7" value="A"> A. 3<br>
+                <input type="radio" name="q7" value="B" class="correct"> B. 4<br>
+                <input type="radio" name="q7" value="C"> C. 5<br>
+                <input type="radio" name="q7" value="D"> D. 6<br>
+                <div class="description incorrect" id="desc-q7-wrong">Incorrect. The correct answer is 'B. 4'. The value of 'x' is incremented twice, resulting in 'y' being 4.</div>
+                <div class="description correct" id="desc-q7-correct">Correct! The output is '4'. The expression involves both post-increment and pre-increment operators.</div>
+                <div class="navigation-buttons">
+                    <button type="button" class="show-description" onclick="showDescription(7)">Show Description</button>
+                    <button type="button" class="next-question" onclick="nextQuestion()">Next</button>
+                </div>
+            </div>
+            
+            <div class="quiz-question" data-question="8">
+                <h3>8. What is the output of the following code snippet?</h3>
+                <pre><code>int main() {<br>
+                &nbsp;&nbsp;int arr[3] = {1, 2, 3};<br>
+                &nbsp;&nbsp;for (int i = 0; i < 3; i++)<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;cout << arr[i] << " ";<br>
+                &nbsp;&nbsp;return 0;<br>
+                }</code></pre>
+                <input type="radio" name="q8" value="A" class="correct"> A. 1 2 3<br>
+                <input type="radio" name="q8" value="B"> B. 2 3 4<br>
+                <input type="radio" name="q8" value="C"> C. 1 1 1<br>
+                <input type="radio" name="q8" value="D"> D. 3 2 1<br>
+                <div class="description incorrect" id="desc-q8-wrong">Incorrect. The correct answer is 'A. 1 2 3'. The code prints the elements of the array in order.</div>
+                <div class="description correct" id="desc-q8-correct">Correct! The output is '1 2 3'. The for loop prints each element of the array.</div>
+                <div class="navigation-buttons">
+                    <button type="button" class="show-description" onclick="showDescription(8)">Show Description</button>
+                    <button type="button" class="next-question" onclick="nextQuestion()">Next</button>
+                </div>
+            </div>
+            
+            <div class="quiz-question" data-question="9">
+                <h3>9. What is the output of the following code snippet?</h3>
+                <pre><code>int main() {<br>
+                &nbsp;&nbsp;int a = 3;<br>
+                &nbsp;&nbsp;int b = a * ++a;<br>
+                &nbsp;&nbsp;cout << b << endl;<br>
+                &nbsp;&nbsp;return 0;<br>
+                }</code></pre>
+                <input type="radio" name="q9" value="A" class="correct"> A. 12<br>
+                <input type="radio" name="q9" value="B"> B. 9<br>
+                <input type="radio" name="q9" value="C"> C. 15<br>
+                <input type="radio" name="q9" value="D"> D. 6<br>
+                <div class="description incorrect" id="desc-q9-wrong">Incorrect. The correct answer is 'A. 12'. The value of 'a' is incremented before multiplication, resulting in 'a * a' being 12.</div>
+                <div class="description correct" id="desc-q9-correct">Correct! The output is '12'. The pre-increment operator increases 'a' to 4 before multiplication.</div>
+                <div class="navigation-buttons">
+                    <button type="button" class="show-description" onclick="showDescription(9)">Show Description</button>
+                    <button type="button" class="next-question" onclick="nextQuestion()">Next</button>
+                </div>
+            </div>
+            
+            <div class="quiz-question" data-question="10">
+                <h3>10. What is the output of the following code snippet?</h3>
+                <pre><code>int main() {<br>
+                &nbsp;&nbsp;int x = 5;<br>
+                &nbsp;&nbsp;int &y = x;<br>
+                &nbsp;&nbsp;y += 10;<br>
+                &nbsp;&nbsp;cout << x << " " << y << endl;<br>
+                &nbsp;&nbsp;return 0;<br>
+                }</code></pre>
+                <input type="radio" name="q10" value="A" class="correct"> A. 15 15<br>
+                <input type="radio" name="q10" value="B"> B. 5 15<br>
+                <input type="radio" name="q10" value="C"> C. 15 5<br>
+                <input type="radio" name="q10" value="D"> D. 5 5<br>
+                <div class="description incorrect" id="desc-q10-wrong">Incorrect. The correct answer is 'A. 15 15'. The reference 'y' points to the same variable 'x', so both show the updated value.</div>
+                <div class="description correct" id="desc-q10-correct">Correct! Both 'x' and 'y' refer to the same variable, so both will display the updated value '15'.</div>
+                <div class="navigation-buttons">
+                    <button type="button" class="show-description" onclick="showDescription(10)">Show Description</button>
+                    <button type="button" class="next-question" id="finishQuizButton" onclick="submitQuiz()">Finish Quiz</button>
+                </div>
+            </div>
+        </form>
+        <div id="result"></div>
+    </div>
+            <script>
+                let currentQuestion = 1;
+                const totalQuestions = 10;
+                const correctAnswers = ['D', 'C', 'C', 'A', 'A', 'B', 'B', 'A', 'A', 'A'];
+
+                function showQuestion(questionNumber) {
+            document.querySelectorAll('.quiz-question').forEach((el) => {
+                el.style.display = 'none';
+            });
+            document.querySelector(`.quiz-question[data-question="${questionNumber}"]`).style.display = 'block';
+        }
+
+        function submitQuiz() {
+            let score = 0;
+
+            // Loop through all questions and check answers
+            for (let i = 1; i <= totalQuestions; i++) {
+            const selectedAnswer = document.querySelector(`input[name="q${i}"]:checked`);
+            if (selectedAnswer) {
+                if (selectedAnswer.classList.contains('correct')) {
+                    score++;
+                }
+            }
+            // Display the result
+            const resultContainer = document.getElementById('result');
+            resultContainer.innerHTML = `<h2>Your Score: ${score} out of ${totalQuestions}</h2>`;
+
+
+            if (score === totalQuestions) {
+                quote = "🎉 Excellent work! You nailed every question! 🎉";
+            } else if (score >= totalQuestions * 0.7) {
+                quote = "👍 Great job! You're quite knowledgeable in CPP! 👍";
+            } else {
+                quote = "💪 Good effort! Keep practicing to improve your skills! 💪";
+            }
+
+             document.getElementById('result').innerHTML = `
+                 <h2>Your score is ${score} out of ${totalQuestions}.</h2>
+                <div class="quote">${quote}</div>
+                <h3>Learn More:</h3>
+                 <ul>
+                    <li><a href="https://www.learncpp.com" target="_blank">Learn C++ - A Free Interactive C++ Tutorial</a></li>
+                    <li><a href="https://www.tutorialspoint.com/cplusplus/index.htm" target="_blank">TutorialsPoint - C++ Programming</a></li>
+                    <li><a href="https://www.geeksforgeeks.org/c-plus-plus/" target="_blank">GeeksforGeeks - C++ Programming Language</a></li>
+                    <li><a href="https://cplusplus.com/doc/tutorial/" target="_blank">CPlusPlus.com - C++ Tutorial</a></li>
+                </ul>
+            `;
+        // Optionally, you can store the score in sessionStorage or send it to the server
+        const username = sessionStorage.getItem('username'); // Assuming you store the username in sessionStorage
+            if (username) {
+                // Send score to server or store it
+                console.log(`User: ${username}, Score: ${score}`);
+            }
+          }
+        }
+
+        function showDescription(questionNumber) {
+            const selectedValue = document.querySelector(`.quiz-question[data-question="${questionNumber}"] input[type="radio"]:checked`);
+            const descriptionCorrect = document.getElementById(`desc-q${questionNumber}-correct`);
+            const descriptionWrong = document.getElementById(`desc-q${questionNumber}-wrong`);
+
+            if (selectedValue) {
+                if (selectedValue.value === correctAnswers[questionNumber - 1]) {
+                    descriptionCorrect.style.display = 'block';
+                    descriptionWrong.style.display = 'none';
+                } else {
+                    descriptionCorrect.style.display = 'none';
+                    descriptionWrong.style.display = 'block';
+                }
+                // Disable radio buttons after showing description
+                document.querySelectorAll(`.quiz-question[data-question="${questionNumber}"] input[type="radio"]`).forEach((el) => {
+                    el.classList.add('disabled');
+                    el.disabled = true;
+                });
+            } else {
+                descriptionCorrect.style.display = 'none';
+                descriptionWrong.style.display = 'none';
+            }
+        }
+
+        function calculateScore() {
+            let score = 0;
+
+            // Get all the questions
+            const questions = document.querySelectorAll('.quiz-question');
+
+            questions.forEach((question) => {
+                const selectedAnswer = question.querySelector('input[type="radio"]:checked');
+                if (selectedAnswer && selectedAnswer.classList.contains('correct')) {
+                    score += 1;
+                }
+            });
+
+            return score;
+        }
+
+        function nextQuestion() {
+            const selectedValue = document.querySelector(`.quiz-question[data-question="${currentQuestion}"] input[type="radio"]:checked`);
+            if (selectedValue) {
+                currentQuestion++;
+                if (currentQuestion > totalQuestions) {
+                    showScore();
+                } else {
+                    showQuestion(currentQuestion);
+                }
+            } else {
+                alert('Please select an answer before proceeding.');
+            }
+        }
+
+        async function submitQuizResults(score) {
+
+            const submitButton = document.getElementById('finishQuizButton'); // Make sure to give your button an ID
+            submitButton.disabled = true; // Disable the button to prevent multiple clicks
+            const username = sessionStorage.getItem('username');
+            const email = sessionStorage.getItem('email');
+            const language = 'CPP'; // adjust based on your quiz logic
+            const difficulty_level = 'Intermediate'; // adjust based on your quiz logic
+
+            console.log('Submitting score for:', { username, email, language: 'CPP', difficulty_level: 'Intermediate', score });
+
+            const scoreData = {
+        username,
+        email,
+        language,
+        difficulty_level,
+        score,
+    };
+
+    try {
+        const response = await fetch('http://localhost:3000/submit-score', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(scoreData),
+        });
+
+        if (!response.ok) {
+            const error = response.text();
+            console.error('Error submitting score:', error);
+            //alert('Error submitting score. Please try again.');
+        } else {
+            const result = response.json();
+            console.log('Score submitted successfully:', result);
+            //alert('Score submitted successfully!');
+            showScore();
+        }
+    } catch (error) {
+        console.error('Error submitting score:', error);
+       // alert('Error submitting score. Please try again.');
+    } finally {
+        submitButton.disabled = false; // Re-enable the button if needed
+    }
+}
+        // Event listener for the finish quiz button
+        document.getElementById('finishQuizButton').addEventListener('click', () => {
+            const score = calculateScore();
+            submitQuizResults(score);
+        });
+
+        // Show the first question on load
+        showQuestion(currentQuestion);
+    </script>
+</body>
+</html>

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C Language Quiz</title>
+    <link rel="stylesheet" href="quesstyles.css">
+</head>
+<body>
+    <header>
+        <h1>ProgQuiz - C Language Beginner Level</h1>
+    </header>
+    <div class="container">
+        <h2>C Language Beginner Quiz</h2>
+        <p>Test your basic knowledge of C programming Language.</p>
+        <form id="quizForm">
+            <div class="quiz-question" data-question="1">
+                <h3>1. Who is the creator of the C programming language?</h3>
+                <input type="radio" name="q1" value="A"> A. James Gosling<br>
+                <input type="radio" name="q1" value="B" class="correct"> B. Dennis Ritchie<br>
+                <input type="radio" name="q1" value="C"> C. Bjarne Stroustrup<br>
+                <input type="radio" name="q1" value="D"> D. Ken Thompson<br>
+                <div class="description incorrect" id="desc-q1-wrong">Incorrect. The creator of the C programming language is Dennis Ritchie.</div>
+                <div class="description correct" id="desc-q1-correct">Correct! The creator of the C programming language is Dennis Ritchie.</div>
+                <div class="navigation-buttons">
+                    <button type="button" class="show-description" onclick="showDescription(1)">Show Description</button>
+                    <button type="button" class="next-question" onclick="nextQuestion()">Next</button>
+                </div>
+            </div>
+
+            <div class="quiz-question" data-question="2">
+                <h3>2. What is the extension of C language source files?</h3>
+                <input type="radio" name="q2" value="A"> A. .java<br>
+                <input type="radio" name="q2" value="B" class="correct"> B. .c<br>
+                <input type="radio" name="q2" value="C"> C. .cpp<br>
+                <input type="radio" name="q2" value="D"> D. .py<br>
+                <div class="description incorrect" id="desc-q2-wrong">Incorrect. The correct extension for C language source files is ".c".</div>
+                <div class="description correct" id="desc-q2-correct">Correct! The correct extension for C language source files is ".c".</div>
+                <div class="navigation-buttons">
+                    <button type="button" class="show-description" onclick="showDescription(2)">Show Description</button>
+                    <button type="button" class="next-question" onclick="nextQuestion()">Next</button>
+                </div>
+            </div>
+
+            <div class="quiz-question" data-question="3">
+                <h3>3. Which of these is not a C keyword?</h3>
+                <input type="radio" name="q3" value="A"> A. auto<br>
+                <input type="radio" name="q3" value="B"> B. break<br>
+                <input type="radio" name="q3" value="C" class="correct"> C. integer<br>
+                <input type="radio" name="q3" value="D"> D. return<br>
+                <div class="description incorrect" id="desc-q3-wrong">Incorrect. "integer" is not a C keyword; it should be "int".</div>
+                <div class="description correct" id="desc-q3-correct">Correct! "integer" is not a C keyword; it should be "int".</div>
+                <div class="navigation-buttons">
+                    <button type="button" class="show-description" onclick="showDescription(3)">Show Description</button>
+                    <button type="button" class="next-question" onclick="nextQuestion()">Next</button>
+                </div>
+            </div>
+
+             <div class="quiz-question" data-question="4">
+                <h3>4. What is the standard entry point for a C program?</h3>
+                <input type="radio" name="q4" value="A"> A. start()<br>
+                <input type="radio" name="q4" value="B" class="correct"> B. main()<br>
+                <input type="radio" name="q4" value="C"> C. init()<br>
+                <input type="radio" name="q4" value="D"> D. run()<br>
+                <div class="description incorrect" id="desc-q4-wrong">Incorrect. The standard entry point for a C program is main().</div>
+                <div class="description correct" id="desc-q4-correct">Correct! The standard entry point for a C program is main().</div>
+                <div class="navigation-buttons">
+                    <button type="button" class="show-description" onclick="showDescription(4)">Show Description</button>
+                    <button type="button" class="next-question" onclick="nextQuestion()">Next</button>
+                </div>
+            </div>
+
+            <div class="quiz-question" data-question="5">
+                <h3>5. Which data type is used to create a variable that should store text in C?</h3>
+                <input type="radio" name="q5" value="A"> A. String<br>
+                <input type="radio" name="q5" value="B" class="correct"> B. char<br>
+                <input type="radio" name="q5" value="C"> C. myString<br>
+                <input type="radio" name="q5" value="D"> D. Txt<br>
+                <div class="description incorrect" id="desc-q5-wrong">Incorrect. The correct data type to store text in C is "char".</div>
+                <div class="description correct" id="desc-q5-correct">Correct! The correct data type to store text in C is "char".</div>
+                <div class="navigation-buttons">
+                    <button type="button" class="show-description" onclick="showDescription(5)">Show Description</button>
+                    <button type="button" class="next-question" onclick="nextQuestion()">Next</button>
+                </div>
+            </div>
+
+            <div class="quiz-question" data-question="6">
+                <h3>6. Which of these is a valid declaration of a char in C?</h3>
+                <input type="radio" name="q6" value="A"> A. char ch='AB';<br>
+                <input type="radio" name="q6" value="B" class="correct"> B. char ch='A';<br>
+                <input type="radio" name="q6" value="C"> C. char ch="A";<br>
+                <input type="radio" name="q6" value="D"> D. char ch=A;<br>
+                <div class="description incorrect" id="desc-q6-wrong">Incorrect. In C, a char variable can hold only one character. Correct declaration is 'char ch = 'A';'</div>
+                <div class="description correct" id="desc-q6-correct">Correct! In C, a char variable can hold only one character. Correct declaration is 'char ch = 'A';'</div>
+                <div class="navigation-buttons">
+                    <button type="button" class="show-description" onclick="showDescription(6)">Show Description</button>
+                    <button type="button" class="next-question" onclick="nextQuestion()">Next</button>
+                </div>
+            </div>
+
+            <div class="quiz-question" data-question="7">
+                <h3>7. Which function is used to print output to the screen in C?</h3>
+                <input type="radio" name="q7" value="A"> A. cout<br>
+                <input type="radio" name="q7" value="B"> B. System.out.println<br>
+                <input type="radio" name="q7" value="C" class="correct"> C. printf<br>
+                <input type="radio" name="q7" value="D"> D. print<br>
+                <div class="description incorrect" id="desc-q7-wrong">Incorrect. The "printf" function prints output to the console in C.</div>
+                <div class="description correct" id="desc-q7-correct">Correct! The "printf" function prints output to the console in C.</div>
+                <div class="navigation-buttons">
+                    <button type="button" class="show-description" onclick="showDescription(7)">Show Description</button>
+                    <button type="button" class="next-question" onclick="nextQuestion()">Next</button>
+                </div>
+            </div>
+
+            <div class="quiz-question" data-question="8">
+                <h3>8. Which function is used to read input from the user in C?</h3>
+                <input type="radio" name="q8" value="A"> A. cin<br>
+                <input type="radio" name="q8" value="B"> B. System.in.read<br>
+                <input type="radio" name="q8" value="C" class="correct"> C. scanf<br>
+                <input type="radio" name="q8" value="D"> D. read<br>
+                <div class="description incorrect" id="desc-q8-wrong">Incorrect. The "scanf" function is used to read input from the user in C.</div>
+                <div class="description correct" id="desc-q8-correct">Correct! The "scanf" function is used to read input from the user in C.</div>
+                <div class="navigation-buttons">
+                    <button type="button" class="show-description" onclick="showDescription(8)">Show Description</button>
+                    <button type="button" class="next-question" onclick="nextQuestion()">Next</button>
+                </div>
+            </div>
+
+            <div class="quiz-question" data-question="9">
+                <h3>9. Which of these is not a primitive data type in C?</h3>
+                <input type="radio" name="q9" value="A"> A. int<br>
+                <input type="radio" name="q9" value="B"> B. float<br>
+                <input type="radio" name="q9" value="C" class="correct"> C. boolean<br>
+                <input type="radio" name="q9" value="D"> D. char<br>
+                <div class="description incorrect" id="desc-q9-wrong">Incorrect. The "boolean" type is not a primitive data type in C.</div>
+                <div class="description correct" id="desc-q9-correct">Correct! The "boolean" type is not a primitive data type in C.</div>
+                <div class="navigation-buttons">
+                    <button type="button" class="show-description" onclick="showDescription(9)">Show Description</button>
+                    <button type="button" class="next-question" onclick="nextQuestion()">Next</button>
+                </div>
+            </div>
+
+            <div class="quiz-question" data-question="10">
+                <h3>10. Which of these is a valid C loop?</h3>
+                <input type="radio" name="q10" value="A" class="correct"> A. for(int i=0;i<10;i++)<br>
+                <input type="radio" name="q10" value="B"> B. loop(int i=0;i<10;i++)<br>
+                <input type="radio" name="q10" value="C"> C. repeat(int i=0;i<10;i++)<br>
+                <input type="radio" name="q10" value="D"> D. iterate(int i=0;i<10;i++)<br>
+                <div class="description incorrect" id="desc-q10-wrong">Incorrect. The correct way to declare a for loop in C is "for(int i=0; i<10; i++)".</div>
+                <div class="description correct" id="desc-q10-correct">Correct! The correct way to declare a for loop in C is "for(int i=0; i<10; i++)".</div>
+                <div class="navigation-buttons">
+                    <button type="button" class="show-description" onclick="showDescription(10)">Show Description</button>
+                    <button type="button" class="next-question" id="finishQuizButton" onclick="submitQuiz()">Finish Quiz</button>
+                </div>
+            </div>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script>
+        let currentQuestion = 1;
+        const totalQuestions = 10;
+        const correctAnswers = ['B', 'B', 'C', 'B', 'B', 'B', 'C', 'C', 'C', 'A'];
+
+        function showQuestion(questionNumber) {
+            document.querySelectorAll('.quiz-question').forEach((el) => {
+                el.style.display = 'none';
+            });
+            document.querySelector(`.quiz-question[data-question="${questionNumber}"]`).style.display = 'block';
+        }
+
+        function submitQuiz() {
+            let score = 0;
+
+            // Loop through all questions and check answers
+            for (let i = 1; i <= totalQuestions; i++) {
+            const selectedAnswer = document.querySelector(`input[name="q${i}"]:checked`);
+            if (selectedAnswer) {
+                if (selectedAnswer.classList.contains('correct')) {
+                    score++;
+                }
+            }
+            // Display the result
+            const resultContainer = document.getElementById('result');
+            resultContainer.innerHTML = `<h2>Your Score: ${score} out of ${totalQuestions}</h2>`;
+
+
+            if (score === totalQuestions) {
+                quote = "🎉 Excellent work! You nailed every question! 🎉";
+            } else if (score >= totalQuestions * 0.7) {
+                quote = "👍 Great job! You're quite knowledgeable in C! 👍";
+            } else {
+                quote = "💪 Good effort! Keep practicing to improve your skills! 💪";
+            }
+
+             document.getElementById('result').innerHTML = `
+                 <h2>Your score is ${score} out of ${totalQuestions}.</h2>
+                <div class="quote">${quote}</div>
+                <h3>Learn More:</h3>
+                 <ul>
+                     <li><a href="https://www.learn-c.org" target="_blank">Learn C - A Free Interactive C Tutorial</a></li>
+                     <li><a href="https://www.tutorialspoint.com/cprogramming/index.htm" target="_blank">TutorialsPoint - C Programming</a></li>
+                     <li><a href="https://www.geeksforgeeks.org/c-programming-language/" target="_blank">GeeksforGeeks - C Programming Language</a></li>       
+                     <li><a href="https://www.cprogramming.com/" target="_blank">CProgramming.com - C Programming Resources</a></li>
+                 </ul>
+            `;
+
+            // Optionally, you can store the score in sessionStorage or send it to the server
+            const username = sessionStorage.getItem('username'); // Assuming you store the username in sessionStorage
+            if (username) {
+                // Send score to server or store it
+                console.log(`User: ${username}, Score: ${score}`);
+            }
+          }
+        }
+
+        function showDescription(questionNumber) {
+            const selectedValue = document.querySelector(`.quiz-question[data-question="${questionNumber}"] input[type="radio"]:checked`);
+            const descriptionCorrect = document.getElementById(`desc-q${questionNumber}-correct`);
+            const descriptionWrong = document.getElementById(`desc-q${questionNumber}-wrong`);
+
+            if (selectedValue) {
+                if (selectedValue.value === correctAnswers[questionNumber - 1]) {
+                    descriptionCorrect.style.display = 'block';
+                    descriptionWrong.style.display = 'none';
+                } else {
+                    descriptionCorrect.style.display = 'none';
+                    descriptionWrong.style.display = 'block';
+                }
+                // Disable radio buttons after showing description
+                document.querySelectorAll(`.quiz-question[data-question="${questionNumber}"] input[type="radio"]`).forEach((el) => {
+                    el.classList.add('disabled');
+                    el.disabled = true;
+                });
+            } else {
+                descriptionCorrect.style.display = 'none';
+                descriptionWrong.style.display = 'none';
+            }
+        }
+
+        function calculateScore() {
+            let score = 0;
+
+            // Get all the questions
+            const questions = document.querySelectorAll('.quiz-question');
+
+            questions.forEach((question) => {
+                const selectedAnswer = question.querySelector('input[type="radio"]:checked');
+                if (selectedAnswer && selectedAnswer.classList.contains('correct')) {
+                    score += 1;
+                }
+            });
+
+            return score;
+        }
+
+        function nextQuestion() {
+            const selectedValue = document.querySelector(`.quiz-question[data-question="${currentQuestion}"] input[type="radio"]:checked`);
+            if (selectedValue) {
+                currentQuestion++;
+                if (currentQuestion > totalQuestions) {
+                    showScore();
+                } else {
+                    showQuestion(currentQuestion);
+                }
+            } else {
+                alert('Please select an answer before proceeding.');
+            }
+        }
+
+        async function submitQuizResults(score) {
+
+            const submitButton = document.getElementById('finishQuizButton'); // Make sure to give your button an ID
+            submitButton.disabled = true; // Disable the button to prevent multiple clicks
+            const username = sessionStorage.getItem('username');
+            const email = sessionStorage.getItem('email');
+            const language = 'C'; // adjust based on your quiz logic
+            const difficulty_level = 'Beginner'; // adjust based on your quiz logic
+
+            console.log('Submitting score for:', { username, email, language: 'C', difficulty_level: 'Beginner', score });
+
+            const scoreData = {
+        username,
+        email,
+        language,
+        difficulty_level,
+        score,
+    };
+
+    try {
+        const response = await fetch('http://localhost:3000/submit-score', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(scoreData),
+        });
+
+        if (!response.ok) {
+            const error = response.text();
+            console.error('Error submitting score:', error);
+            //alert('Error submitting score. Please try again.');
+        } else {
+            const result = response.json();
+            console.log('Score submitted successfully:', result);
+            //alert('Score submitted successfully!');
+            showScore();
+        }
+    } catch (error) {
+        console.error('Error submitting score:', error);
+       // alert('Error submitting score. Please try again.');
+    } finally {
+        submitButton.disabled = false; // Re-enable the button if needed
+    }
+}
+        // Event listener for the finish quiz button
+        document.getElementById('finishQuizButton').addEventListener('click', () => {
+            const score = calculateScore();
+            submitQuizResults(score);
+        });
+
+        // Show the first question on load
+        showQuestion(currentQuestion);
+    </script>
+</body>
+</html>

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intermediate CSS Language Quiz</title>
+    <link rel="stylesheet" href="quesstyles.css">
+</head>
+<body>
+    <header>
+        <h1>ProgQuiz - CSS Language Intermediate Level</h1>
+    </header>
+    <div class="container">
+        <h1>Intermediate CSS Language Quiz</h1>
+        <p>Test your intermediate knowledge of CSS.</p>
+        <form id="quizForm">
+            <!-- Multiple Choice Questions -->
+            <div class="quiz-question" data-question="1">
+                <h3>1. What is the default value of the 'position' property in CSS?</h3>
+                <input type="radio" name="q1" value="A"> A. relative<br>
+                <input type="radio" name="q1" value="B"> B. absolute<br>
+                <input type="radio" name="q1" value="C"> C. fixed<br>
+                <input type="radio" name="q1" value="D" class="correct"> D. static<br>
+                <div class="description incorrect" id="desc-q1-wrong">Incorrect. The correct answer is D. The default value of the 'position' property is 'static'.</div>
+                <div class="description correct" id="desc-q1-correct">Correct! The default value of the 'position' property is 'static'.</div>
+                <div class="navigation-buttons">
+                    <button type="button" class="show-description" onclick="showDescription(1)">Show Description</button>
+                    <button type="button" class="next-question" onclick="nextQuestion()">Next</button>
+                </div>
+            </div>
+            
+            <div class="quiz-question" data-question="2">
+                <h3>2. How do you apply a CSS transition effect to an element?</h3>
+                <input type="radio" name="q2" value="A"> A. animate: property duration;<br>
+                <input type="radio" name="q2" value="B"> B. effect: property duration;<br>
+                <input type="radio" name="q2" value="C"> C. transition-effect: property duration;<br>
+                <input type="radio" name="q2" value="D" class="correct"> D. transition: property duration;<br>
+                <div class="description incorrect" id="desc-q2-wrong">Incorrect. The correct answer is D. The 'transition' property is used to apply a CSS transition effect.</div>
+                <div class="description correct" id="desc-q2-correct">Correct! The 'transition' property is used to apply a CSS transition effect.</div>
+                <div class="navigation-buttons">
+                    <button type="button" class="show-description" onclick="showDescription(2)">Show Description</button>
+                    <button type="button" class="next-question" onclick="nextQuestion()">Next</button>
+                </div>
+            </div>
+            
+            <div class="quiz-question" data-question="3">
+                <h3>3. What does the 'flex-grow' property do in CSS Flexbox?</h3>
+                <input type="radio" name="q3" value="A"> A. Specifies the item's alignment<br>
+                <input type="radio" name="q3" value="B"> B. Specifies the item's maximum size<br>
+                <input type="radio" name="q3" value="C" class="correct"> C. Specifies how much the item will grow relative to the rest<br>
+                <input type="radio" name="q3" value="D"> D. Specifies the item's minimum size<br>
+                <div class="description incorrect" id="desc-q3-wrong">Incorrect. The correct answer is C. The 'flex-grow' property specifies how much the item will grow relative to the rest of the flex items.</div>
+                <div class="description correct" id="desc-q3-correct">Correct! The 'flex-grow' property specifies how much the item will grow relative to the rest of the flex items.</div>
+                <div class="navigation-buttons">
+                    <button type="button" class="show-description" onclick="showDescription(3)">Show Description</button>
+                    <button type="button" class="next-question" onclick="nextQuestion()">Next</button>
+                </div>
+            </div>
+            
+            <div class="quiz-question" data-question="4">
+                <h3>4. How do you create a CSS grid layout with 3 columns?</h3>
+                <input type="radio" name="q4" value="A"> A. grid-columns: 3;<br>
+                <input type="radio" name="q4" value="B"> B. grid-template: 3 columns;<br>
+                <input type="radio" name="q4" value="C"> C. column-count: 3;<br>
+                <input type="radio" name="q4" value="D" class="correct"> D. grid-template-columns: repeat(3, 1fr);<br>
+                <div class="description incorrect" id="desc-q4-wrong">Incorrect. The correct answer is D. 'grid-template-columns: repeat(3, 1fr);' creates a grid layout with 3 columns.</div>
+                <div class="description correct" id="desc-q4-correct">Correct! 'grid-template-columns: repeat(3, 1fr);' creates a grid layout with 3 columns.</div>
+                <div class="navigation-buttons">
+                    <button type="button" class="show-description" onclick="showDescription(4)">Show Description</button>
+                    <button type="button" class="next-question" onclick="nextQuestion()">Next</button>
+                </div>
+            </div>
+            
+            <div class="quiz-question" data-question="5">
+                <h3>5. What is the purpose of the 'z-index' property in CSS?</h3>
+                <input type="radio" name="q5" value="A"> A. Specifies the visibility of elements<br>
+                <input type="radio" name="q5" value="B" class="correct"> B. Specifies the stack order of positioned elements<br>
+                <input type="radio" name="q5" value="C"> C. Specifies the opacity of elements<br>
+                <input type="radio" name="q5" value="D"> D. Specifies the margin of elements<br>
+                <div class="description incorrect" id="desc-q5-wrong">Incorrect. The correct answer is B. The 'z-index' property specifies the stack order of positioned elements.</div>
+                <div class="description correct" id="desc-q5-correct">Correct! The 'z-index' property specifies the stack order of positioned elements.</div>
+                <div class="navigation-buttons">
+                    <button type="button" class="show-description" onclick="showDescription(5)">Show Description</button>
+                    <button type="button" class="next-question" onclick="nextQuestion()">Next</button>
+                </div>
+            </div>
+            
+            <div class="quiz-question" data-question="6">
+                <h3>6. What is the result of the following CSS code?</h3>
+                <code>button {<br>
+                &nbsp;&nbsp;background-color: blue;<br>
+                &nbsp;&nbsp;color: white;<br>
+                &nbsp;&nbsp;border: none;<br>
+                }</code><br>
+                <input type="radio" name="q6" value="A"> A. Blue text with white background and no border<br>
+                <input type="radio" name="q6" value="B" class="correct"> B. Blue background with white text and no border<br>
+                <input type="radio" name="q6" value="C"> C. White background with blue text and no border<br>
+                <input type="radio" name="q6" value="D"> D. Blue background with default text color and border<br>
+                <div class="description incorrect" id="desc-q6-wrong">Incorrect. The correct answer is B. The background color is blue, text color is white, and there is no border.</div>
+                <div class="description correct" id="desc-q6-correct">Correct! The background color is blue, text color is white, and there is no border.</div>
+                <div class="navigation-buttons">
+                    <button type="button" class="show-description" onclick="showDescription(6)">Show Description</button>
+                    <button type="button" class="next-question" onclick="nextQuestion()">Next</button>
+                </div>
+            </div>
+            
+            <div class="quiz-question" data-question="7">
+                <h3>7. What does the 'calc()' function do in CSS?</h3>
+                <pre><code>div {<br>
+                &nbsp;&nbsp;width: calc(100% - 20px);<br>
+                }</code></pre>
+                <input type="radio" name="q7" value="A"> A. Calculates the number of elements<br>
+                <input type="radio" name="q7" value="B"> B. Performs mathematical operations on color values<br>
+                <input type="radio" name="q7" value="C" class="correct"> C. Performs calculations to determine CSS property values<br>
+                <input type="radio" name="q7" value="D"> D. Calculates the font size based on screen resolution<br>
+                <div class="description incorrect" id="desc-q7-wrong">Incorrect. The correct answer is C. The 'calc()' function performs calculations to determine CSS property values.</div>
+                <div class="description correct" id="desc-q7-correct">Correct! The 'calc()' function performs calculations to determine CSS property values.</div>
+                <div class="navigation-buttons">
+                    <button type="button" class="show-description" onclick="showDescription(7)">Show Description</button>
+                    <button type="button" class="next-question" onclick="nextQuestion()">Next</button>
+                </div>
+            </div>
+            
+            <div class="quiz-question" data-question="8">
+                <h3>8. How can you create a media query for devices with a maximum width of 768px?</h3>
+                <pre><code>@media (max-width: 768px) {<br>
+                &nbsp;&nbsp;/* CSS properties */<br>
+                }</code></pre>
+                <input type="radio" name="q8" value="A"> A. @media (min-width: 768px)<br>
+                <input type="radio" name="q8" value="B"> B. @media (width: 768px)<br>
+                <input type="radio" name="q8" value="C"> C. @media (device-width: 768px)<br>
+                <input type="radio" name="q8" value="D" class="correct"> D. @media (max-width: 768px)<br>
+                <div class="description incorrect" id="desc-q8-wrong">Incorrect. The correct answer is D. The media query '@media (max-width: 768px)' targets devices with a maximum width of 768px.</div>
+                <div class="description correct" id="desc-q8-correct">Correct! The media query '@media (max-width: 768px)' targets devices with a maximum width of 768px.</div>
+                <div class="navigation-buttons">
+                    <button type="button" class="show-description" onclick="showDescription(8)">Show Description</button>
+                    <button type="button" class="next-question" onclick="nextQuestion()">Next</button>
+                </div>
+            </div>
+            
+            <div class="quiz-question" data-question="9">
+                <h3>9. What is the use of the 'opacity' property in CSS?</h3>
+                <input type="radio" name="q9" value="A"> A. It sets the color of an element<br>
+                <input type="radio" name="q9" value="B" class="correct"> B. It sets the transparency level of an element<br>
+                <input type="radio" name="q9" value="C"> C. It sets the border width of an element<br>
+                <input type="radio" name="q9" value="D"> D. It sets the font style of an element<br>
+                <div class="description incorrect" id="desc-q9-wrong">Incorrect. The correct answer is B. The 'opacity' property sets the transparency level of an element.</div>
+                <div class="description correct" id="desc-q9-correct">Correct! The 'opacity' property sets the transparency level of an element.</div>
+                <div class="navigation-buttons">
+                    <button type="button" class="show-description" onclick="showDescription(9)">Show Description</button>
+                    <button type="button" class="next-question" onclick="nextQuestion()">Next</button>
+                </div>
+            </div>
+            
+            <div class="quiz-question" data-question="10">
+                <h3>10. Which CSS property is used to control the spacing between lines of text?</h3>
+                <input type="radio" name="q10" value="A"> A. text-spacing<br>
+                <input type="radio" name="q10" value="B"> B. font-spacing<br>
+                <input type="radio" name="q10" value="C" class="correct"> C. line-height<br>
+                <input type="radio" name="q10" value="D"> D. margin<br>
+                <div class="description incorrect" id="desc-q10-wrong">Incorrect. The correct answer is C. 'line-height' controls the spacing between lines of text.</div>
+                <div class="description correct" id="desc-q10-correct">Correct! The 'line-height' property controls the spacing between lines of text.</div>
+                <div class="navigation-buttons">
+                    <button type="button" class="show-description" onclick="showDescription(10)">Show Description</button>
+                    <button type="button" class="next-question" id="finishQuizButton" onclick="submitQuiz()">Finish Quiz</button>
+                </div>
+            </div>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script>
+        let currentQuestion = 1;
+        const totalQuestions = 10;
+        const correctAnswers = ['D', 'D', 'C', 'D', 'B', 'B', 'C', 'D', 'B', 'C'];
+        
+        function showQuestion(questionNumber) {
+            document.querySelectorAll('.quiz-question').forEach((el) => {
+                el.style.display = 'none';
+            });
+            document.querySelector(`.quiz-question[data-question="${questionNumber}"]`).style.display = 'block';
+        }
+
+        function submitQuiz() {
+            let score = 0;
+
+            // Loop through all questions and check answers
+            for (let i = 1; i <= totalQuestions; i++) {
+            const selectedAnswer = document.querySelector(`input[name="q${i}"]:checked`);
+            if (selectedAnswer) {
+                if (selectedAnswer.classList.contains('correct')) {
+                    score++;
+                }
+            }
+            // Display the result
+            const resultContainer = document.getElementById('result');
+            resultContainer.innerHTML = `<h2>Your Score: ${score} out of ${totalQuestions}</h2>`;
+
+            if (score === totalQuestions) {
+                quote = "🎉 Excellent work! You nailed every question! 🎉";
+            } else if (score >= totalQuestions * 0.7) {
+                quote = "👍 Great job! You're quite knowledgeable in CSS! 👍";
+            } else {
+                quote = "💪 Good effort! Keep practicing to improve your skills! 💪";
+            }
+
+            document.getElementById('result').innerHTML = `
+                <h2>Your score is ${score} out of ${totalQuestions}.</h2>
+                <div class="quote">${quote}</div>
+                <h3>Learn More:</h3>
+                <ul>
+                    <li><a href="https://www.w3schools.com/css/" target="_blank">W3Schools - CSS Tutorial</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">MDN Web Docs - CSS Guide</a></li>
+                    <li><a href="https://css-tricks.com/" target="_blank">CSS-Tricks - Tips and Techniques</a></li>
+                    <li><a href="https://www.freecodecamp.org/news/tag/css/" target="_blank">FreeCodeCamp - CSS Articles and Tutorials</a></li>
+                </ul>
+            `;
+
+            // Optionally, you can store the score in sessionStorage or send it to the server
+            const username = sessionStorage.getItem('username'); // Assuming you store the username in sessionStorage
+            if (username) {
+                // Send score to server or store it
+                console.log(`User: ${username}, Score: ${score}`);
+            }
+          }
+        }
+
+        function showDescription(questionNumber) {
+            const selectedValue = document.querySelector(`.quiz-question[data-question="${questionNumber}"] input[type="radio"]:checked`);
+            const descriptionCorrect = document.getElementById(`desc-q${questionNumber}-correct`);
+            const descriptionWrong = document.getElementById(`desc-q${questionNumber}-wrong`);
+
+            if (selectedValue) {
+                if (selectedValue.value === correctAnswers[questionNumber - 1]) {
+                    descriptionCorrect.style.display = 'block';
+                    descriptionWrong.style.display = 'none';
+                } else {
+                    descriptionCorrect.style.display = 'none';
+                    descriptionWrong.style.display = 'block';
+                }
+                // Disable radio buttons after showing description
+                document.querySelectorAll(`.quiz-question[data-question="${questionNumber}"] input[type="radio"]`).forEach((el) => {
+                    el.classList.add('disabled');
+                    el.disabled = true;
+                });
+            } else {
+                descriptionCorrect.style.display = 'none';
+                descriptionWrong.style.display = 'none';
+            }
+        }
+
+        function calculateScore() {
+            let score = 0;
+
+            // Get all the questions
+            const questions = document.querySelectorAll('.quiz-question');
+
+            questions.forEach((question) => {
+                const selectedAnswer = question.querySelector('input[type="radio"]:checked');
+                if (selectedAnswer && selectedAnswer.classList.contains('correct')) {
+                    score += 1;
+                }
+            });
+
+            return score;
+        }
+
+        function nextQuestion() {
+            const selectedValue = document.querySelector(`.quiz-question[data-question="${currentQuestion}"] input[type="radio"]:checked`);
+            if (selectedValue) {
+                currentQuestion++;
+                if (currentQuestion > totalQuestions) {
+                    showScore();
+                } else {
+                    showQuestion(currentQuestion);
+                }
+            } else {
+                alert('Please select an answer before proceeding.');
+            }
+        }
+
+        async function submitQuizResults(score) {
+
+            const submitButton = document.getElementById('finishQuizButton'); // Make sure to give your button an ID
+            submitButton.disabled = true; // Disable the button to prevent multiple clicks
+            const username = sessionStorage.getItem('username');
+            const email = sessionStorage.getItem('email');
+            const language = 'CSS'; // adjust based on your quiz logic
+            const difficulty_level = 'Intermediate'; // adjust based on your quiz logic
+
+            console.log('Submitting score for:', { username, email, language: 'CSS', difficulty_level: 'Intermediate', score });
+
+            const scoreData = {
+        username,
+        email,
+        language,
+        difficulty_level,
+        score,
+    };
+
+    try {
+        const response = await fetch('http://localhost:3000/submit-score', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(scoreData),
+        });
+
+        if (!response.ok) {
+            const error = response.text();
+            console.error('Error submitting score:', error);
+            //alert('Error submitting score. Please try again.');
+        } else {
+            const result = response.json();
+            console.log('Score submitted successfully:', result);
+            //alert('Score submitted successfully!');
+            showScore();
+        }
+    } catch (error) {
+        console.error('Error submitting score:', error);
+       // alert('Error submitting score. Please try again.');
+    } finally {
+        submitButton.disabled = false; // Re-enable the button if needed
+    }
+}
+        // Event listener for the finish quiz button
+        document.getElementById('finishQuizButton').addEventListener('click', () => {
+            const score = calculateScore();
+            submitQuizResults(score);
+        });
+
+        // Show the first question on load
+        showQuestion(currentQuestion);
+    </script>
+</body>
+</html>
